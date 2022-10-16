@@ -27,8 +27,12 @@ struct ContentView: View {
         numOfPeopleSelectIndex + Self.minPeopleToSplit
     }
     
+    private var total: Double {
+        checkAmount * (1.0 + Double(tipAmount.rawValue) / 100.0)
+    }
+    
     private var totalPerPerson: Double {
-        checkAmount * (1.0 + Double(tipAmount.rawValue) / 100.0) / Double(numOfPeople)
+        total / Double(numOfPeople)
     }
     
     private var formatter = AdaptedCurrencyFormatter()
@@ -64,7 +68,15 @@ struct ContentView: View {
                 }
                 
                 Section {
+                    Text(formatter.string(for: total) ?? "$0.0")
+                } header: {
+                    Text("Total amount")
+                }
+                
+                Section {
                     Text(formatter.string(for: totalPerPerson) ?? "$0.0")
+                } header: {
+                    Text("Amount per person")
                 }
             }
             .navigationBarTitle("WeSplit")

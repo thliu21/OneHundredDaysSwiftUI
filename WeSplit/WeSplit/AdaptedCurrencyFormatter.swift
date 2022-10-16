@@ -28,7 +28,8 @@ class AdaptedCurrencyFormatter: Formatter {
         for string: String,
         errorDescription error: AutoreleasingUnsafeMutablePointer<NSString?>?
     ) -> Bool {
-        if let convertedValue = formatter.double(from: string) {
+        if let formatted = formatter.unformatted(string: string),
+           let convertedValue = formatter.double(from: formatted) {
             obj?.pointee = convertedValue as AnyObject
             return true
         } else {
