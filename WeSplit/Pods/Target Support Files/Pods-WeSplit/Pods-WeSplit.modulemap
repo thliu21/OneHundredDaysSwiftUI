@@ -1,0 +1,6 @@
+framework module Pods_WeSplit {
+  umbrella header "Pods-WeSplit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,8 @@
+# Podfile
+use_frameworks!
+
+platform :ios, '13.0'
+
+target 'WeSplit' do
+    pod 'CurrencyText', '~> 2.2'
+end

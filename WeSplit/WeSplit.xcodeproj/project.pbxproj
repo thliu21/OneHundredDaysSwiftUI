@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACB9E9974EA7E1FAF49FB26B /* Pods_WeSplit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475AB3AB41EA1F4FACCCB7BC /* Pods_WeSplit.framework */; };
 		C527A7CD28FAA281005AAB0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527A7CC28FAA281005AAB0B /* ContentView.swift */; };
 		C527A7CF28FAA283005AAB0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C527A7CE28FAA283005AAB0B /* Assets.xcassets */; };
 		C527A7D228FAA283005AAB0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C527A7D128FAA283005AAB0B /* Preview Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		C527A7E628FAA283005AAB0B /* WeSplitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527A7E528FAA283005AAB0B /* WeSplitUITests.swift */; };
 		C527A7E828FAA283005AAB0B /* WeSplitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527A7E728FAA283005AAB0B /* WeSplitUITestsLaunchTests.swift */; };
 		C527A7F528FAA330005AAB0B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C527A7F428FAA330005AAB0B /* Main.swift */; };
+		C5FCD10028FBCEED00312FCE /* AdaptedCurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FCD0FF28FBCEED00312FCE /* AdaptedCurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		127F6CC631B4886BB8080475 /* Pods-WeSplit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeSplit.debug.xcconfig"; path = "Target Support Files/Pods-WeSplit/Pods-WeSplit.debug.xcconfig"; sourceTree = "<group>"; };
+		30FE8FE8557DBB6861591BA2 /* Pods-WeSplit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeSplit.release.xcconfig"; path = "Target Support Files/Pods-WeSplit/Pods-WeSplit.release.xcconfig"; sourceTree = "<group>"; };
+		475AB3AB41EA1F4FACCCB7BC /* Pods_WeSplit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeSplit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C527A7C728FAA281005AAB0B /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C527A7CC28FAA281005AAB0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C527A7CE28FAA283005AAB0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 		C527A7E728FAA283005AAB0B /* WeSplitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C527A7F428FAA330005AAB0B /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		C527A7F628FAA38F005AAB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C5FCD0FF28FBCEED00312FCE /* AdaptedCurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptedCurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB9E9974EA7E1FAF49FB26B /* Pods_WeSplit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		028E08718CFF2D280304961D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				127F6CC631B4886BB8080475 /* Pods-WeSplit.debug.xcconfig */,
+				30FE8FE8557DBB6861591BA2 /* Pods-WeSplit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4BBDA90DE1C9036BD4A43E0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				475AB3AB41EA1F4FACCCB7BC /* Pods_WeSplit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C527A7BE28FAA281005AAB0B = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +103,8 @@
 				C527A7DA28FAA283005AAB0B /* WeSplitTests */,
 				C527A7E428FAA283005AAB0B /* WeSplitUITests */,
 				C527A7C828FAA281005AAB0B /* Products */,
+				028E08718CFF2D280304961D /* Pods */,
+				4BBDA90DE1C9036BD4A43E0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +123,7 @@
 			children = (
 				C527A7F628FAA38F005AAB0B /* Info.plist */,
 				C527A7CC28FAA281005AAB0B /* ContentView.swift */,
+				C5FCD0FF28FBCEED00312FCE /* AdaptedCurrencyFormatter.swift */,
 				C527A7CE28FAA283005AAB0B /* Assets.xcassets */,
 				C527A7D028FAA283005AAB0B /* Preview Content */,
 				C527A7F428FAA330005AAB0B /* Main.swift */,
@@ -136,15 +163,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C527A7EB28FAA283005AAB0B /* Build configuration list for PBXNativeTarget "WeSplit" */;
 			buildPhases = (
+				C21D75C6434A748557D46FA3 /* [CP] Check Pods Manifest.lock */,
 				C527A7C328FAA281005AAB0B /* Sources */,
 				C527A7C428FAA281005AAB0B /* Frameworks */,
 				C527A7C528FAA281005AAB0B /* Resources */,
+				2287E17CC51DB9A5CBC970D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WeSplit;
+			packageProductDependencies = (
+			);
 			productName = WeSplit;
 			productReference = C527A7C728FAA281005AAB0B /* WeSplit.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +248,8 @@
 				Base,
 			);
 			mainGroup = C527A7BE28FAA281005AAB0B;
+			packageReferences = (
+			);
 			productRefGroup = C527A7C828FAA281005AAB0B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -254,12 +287,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2287E17CC51DB9A5CBC970D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeSplit/Pods-WeSplit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeSplit/Pods-WeSplit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeSplit/Pods-WeSplit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C21D75C6434A748557D46FA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeSplit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C527A7C328FAA281005AAB0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C527A7F528FAA330005AAB0B /* Main.swift in Sources */,
+				C5FCD10028FBCEED00312FCE /* AdaptedCurrencyFormatter.swift in Sources */,
 				C527A7CD28FAA281005AAB0B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +489,7 @@
 		};
 		C527A7EC28FAA283005AAB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 127F6CC631B4886BB8080475 /* Pods-WeSplit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,6 +521,7 @@
 		};
 		C527A7ED28FAA283005AAB0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30FE8FE8557DBB6861591BA2 /* Pods-WeSplit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
