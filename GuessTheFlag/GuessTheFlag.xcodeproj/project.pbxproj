@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C5A5E453290AC07F003EDD60 /* GuessTheFlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E452290AC07F003EDD60 /* GuessTheFlagApp.swift */; };
-		C5A5E455290AC07F003EDD60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E454290AC07F003EDD60 /* ContentView.swift */; };
+		C5A5E455290AC07F003EDD60 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E454290AC07F003EDD60 /* GameView.swift */; };
 		C5A5E457290AC080003EDD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A5E456290AC080003EDD60 /* Assets.xcassets */; };
 		C5A5E45A290AC080003EDD60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A5E459290AC080003EDD60 /* Preview Assets.xcassets */; };
 		C5A5E464290AC081003EDD60 /* GuessTheFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E463290AC081003EDD60 /* GuessTheFlagTests.swift */; };
 		C5A5E46E290AC081003EDD60 /* GuessTheFlagUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E46D290AC081003EDD60 /* GuessTheFlagUITests.swift */; };
 		C5A5E470290AC081003EDD60 /* GuessTheFlagUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E46F290AC081003EDD60 /* GuessTheFlagUITestsLaunchTests.swift */; };
+		C5A5E47D290BC2DB003EDD60 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E47C290BC2DB003EDD60 /* GameModel.swift */; };
+		C5A5E47F290BC893003EDD60 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E47E290BC893003EDD60 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		C5A5E44F290AC07F003EDD60 /* GuessTheFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A5E452290AC07F003EDD60 /* GuessTheFlagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagApp.swift; sourceTree = "<group>"; };
-		C5A5E454290AC07F003EDD60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C5A5E454290AC07F003EDD60 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		C5A5E456290AC080003EDD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5A5E459290AC080003EDD60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5A5E45F290AC081003EDD60 /* GuessTheFlagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheFlagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		C5A5E469290AC081003EDD60 /* GuessTheFlagUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheFlagUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A5E46D290AC081003EDD60 /* GuessTheFlagUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagUITests.swift; sourceTree = "<group>"; };
 		C5A5E46F290AC081003EDD60 /* GuessTheFlagUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C5A5E47C290BC2DB003EDD60 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		C5A5E47E290BC893003EDD60 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				C5A5E452290AC07F003EDD60 /* GuessTheFlagApp.swift */,
-				C5A5E454290AC07F003EDD60 /* ContentView.swift */,
+				C5A5E454290AC07F003EDD60 /* GameView.swift */,
+				C5A5E47E290BC893003EDD60 /* GameViewModel.swift */,
+				C5A5E47C290BC2DB003EDD60 /* GameModel.swift */,
 				C5A5E456290AC080003EDD60 /* Assets.xcassets */,
 				C5A5E458290AC080003EDD60 /* Preview Content */,
 			);
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A5E455290AC07F003EDD60 /* ContentView.swift in Sources */,
+				C5A5E47F290BC893003EDD60 /* GameViewModel.swift in Sources */,
+				C5A5E455290AC07F003EDD60 /* GameView.swift in Sources */,
 				C5A5E453290AC07F003EDD60 /* GuessTheFlagApp.swift in Sources */,
+				C5A5E47D290BC2DB003EDD60 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

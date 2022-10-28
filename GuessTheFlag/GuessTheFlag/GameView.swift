@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    static let countries = ["china", "france", "germany", "italy", "japan", "korea", "russia", "spain", "uk", "us"]
+    @ObservedObject var game = GameViewModel()
     
     @State private var showingAlert = false
-    
-    @State private var flags: ArraySlice<String> = Self.countries.shuffled()[0..<3]
-    @State private var correctAnswer = Int.random(in: 0..<3)
-    
-    @State private var isAnswerCorrect = false
-    @State private var score = 0
     
     var body: some View {
         GeometryReader { geometry in
@@ -29,7 +23,7 @@ struct ContentView: View {
                         Text("Tap the flag for")
                             .font(.system(.title))
                             .foregroundColor(.white)
-                        Text(flags[correctAnswer].capitalized)
+                        Text(game.question.capitalized)
                             .font(.system(.largeTitle).weight(.heavy))
                             .foregroundColor(.white)
                             .padding()
@@ -40,7 +34,7 @@ struct ContentView: View {
                         Button {
                             flagTapped(num)
                         } label: {
-                            Image(flags[num])
+                            Image(game.flags[num])
                                 .renderingMode(.original)
                                 .resizable()
                                 .scaledToFit()
@@ -52,33 +46,25 @@ struct ContentView: View {
             }
             .alert(isPresented: $showingAlert) {
                 Alert(
-                    title: Text(isAnswerCorrect ? "Right!" : "Wrong..."),
-                    message: Text("Your score is \(score)"),
+                    title: Text(game.isLastAnswerCorrect ? "Right!" : "Wrong..."),
+                    message: Text("Your score is \(game.score)"),
                     dismissButton: .default(Text("Ok")) {
-                        resetGame()
+                        nextQuestion()
                     }
                 )
             }
         }
         .onAppear {
-            resetGame()
+            nextQuestion()
         }
     }
     
     private func flagTapped(_ num: Int) {
-        isAnswerCorrect = num == correctAnswer
-        score += num == correctAnswer ? 1 : 0
+        game.choose(num)
         showingAlert = true
     }
     
-    private func resetGame() {
-        correctAnswer = Int.random(in: 0..<3)
-        flags = Self.countries.shuffled()[0..<3]
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    private func nextQuestion() {
+        game.nextQuestion()
     }
 }
