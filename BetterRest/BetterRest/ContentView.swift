@@ -17,24 +17,36 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("When would you like to wake up?")
-                DatePicker("please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
-                    .labelsHidden()
+            Form {
+                Section {
+                    VStack(alignment: .leading) {
+                        Text("When would you like to wake up?").font(.headline)
+                        DatePicker("please enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                            .labelsHidden()
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Desired Amount of Sleep").font(.headline)
+                        Stepper("\(sleepAmount.simplifiedString) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Daily coffee intake").font(.headline)
+                        Stepper(coffeeCups == 1 ? "1 cup" : "\(coffeeCups) cups", value: $coffeeCups, in: 1...10)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Actual Sleep Time").font(.headline)
+                        Text("\(actualSleepAmount?.formatedHoursAndMinutes() ?? " ")")
+                    }
+                }
                 
-                Text("Desired Amount of Sleep")
-                Stepper("\(sleepAmount.simplifiedString) hours", value: $sleepAmount, in: 4...12, step: 0.25)
-                
-                Text("Daily coffee intake")
-                Stepper(coffeeCups == 1 ? "1 cup" : "\(coffeeCups) cups", value: $coffeeCups, in: 1...10)
-                
-                Text("Actual Sleep Time")
-                Text("\(actualSleepAmount?.formatedHoursAndMinutes() ?? " ")")
+                Section {
+                    Button("Calculate", action: calculateBedtime)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
             }
             .navigationTitle("BetterRest")
-            .toolbar {
-                Button("Calculate", action: calculateBedtime)
-            }
         }
     }
     
@@ -56,7 +68,6 @@ struct ContentView: View {
         } catch {
             actualSleepAmount = nil
         }
-        
     }
 }
 
