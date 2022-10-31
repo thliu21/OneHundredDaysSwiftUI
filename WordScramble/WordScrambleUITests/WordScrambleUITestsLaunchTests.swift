@@ -1,13 +1,14 @@
 //
-//  BetterRestUITestsLaunchTests.swift
-//  BetterRestUITests
+//  WordScrambleUITestsLaunchTests.swift
+//  WordScrambleUITests
 //
-//  Created by Tianhao Liu on 10/29/22.
+//  Created by Tianhao Liu on 10/31/22.
 //
 
 import XCTest
 
-final class BetterRestUITestsLaunchTests: XCTestCase {
+final class WordScrambleUITestsLaunchTests: XCTestCase {
+
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

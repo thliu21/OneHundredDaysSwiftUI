@@ -1,14 +1,15 @@
 //
-//  BetterRestTests.swift
-//  BetterRestTests
+//  WordScrambleTests.swift
+//  WordScrambleTests
 //
-//  Created by Tianhao Liu on 10/29/22.
+//  Created by Tianhao Liu on 10/31/22.
 //
 
-@testable import BetterRest
 import XCTest
+@testable import WordScramble
 
-final class BetterRestTests: XCTestCase {
+final class WordScrambleTests: XCTestCase {
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -27,8 +28,9 @@ final class BetterRestTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        measure {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
+
 }

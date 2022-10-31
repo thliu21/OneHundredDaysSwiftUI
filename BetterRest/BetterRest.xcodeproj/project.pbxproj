@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		C567CDB4290D701400E9B03D /* BetterRestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567CDB3290D701400E9B03D /* BetterRestUITests.swift */; };
 		C567CDB6290D701400E9B03D /* BetterRestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567CDB5290D701400E9B03D /* BetterRestUITestsLaunchTests.swift */; };
 		C567CDC3290D717700E9B03D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567CDC2290D717700E9B03D /* Utilities.swift */; };
+		D5C900349337C62F31D36CBB /* Pods_BetterRest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C3D0DBEC12F77F69EC7BE9E /* Pods_BetterRest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C3D0DBEC12F77F69EC7BE9E /* Pods_BetterRest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetterRest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CF2E5C549899304ACFEA49B /* Pods-BetterRest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterRest.debug.xcconfig"; path = "Target Support Files/Pods-BetterRest/Pods-BetterRest.debug.xcconfig"; sourceTree = "<group>"; };
+		B88AC286CB2AC8101928CB41 /* Pods-BetterRest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetterRest.release.xcconfig"; path = "Target Support Files/Pods-BetterRest/Pods-BetterRest.release.xcconfig"; sourceTree = "<group>"; };
 		C54A62FF290E72AB00E52F8B /* SleepCalc.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SleepCalc.mlmodel; path = ../../SleepCalc.mlmodel; sourceTree = "<group>"; };
 		C567CD95290D701200E9B03D /* BetterRest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterRest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C567CD98290D701200E9B03D /* BetterRestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestApp.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C900349337C62F31D36CBB /* Pods_BetterRest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +80,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2124CD1B02CFF3B1CAE645FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C3D0DBEC12F77F69EC7BE9E /* Pods_BetterRest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37ADDE2926C472BEF1B5EB17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CF2E5C549899304ACFEA49B /* Pods-BetterRest.debug.xcconfig */,
+				B88AC286CB2AC8101928CB41 /* Pods-BetterRest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C567CD8C290D701200E9B03D = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +104,8 @@
 				C567CDA8290D701400E9B03D /* BetterRestTests */,
 				C567CDB2290D701400E9B03D /* BetterRestUITests */,
 				C567CD96290D701200E9B03D /* Products */,
+				37ADDE2926C472BEF1B5EB17 /* Pods */,
+				2124CD1B02CFF3B1CAE645FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C567CDB9290D701400E9B03D /* Build configuration list for PBXNativeTarget "BetterRest" */;
 			buildPhases = (
+				F1A7C2A2A62DADD761900381 /* [CP] Check Pods Manifest.lock */,
+				C581FC1E290F56B2006D5E4A /* ShellScript */,
 				C567CD91290D701200E9B03D /* Sources */,
 				C567CD92290D701200E9B03D /* Frameworks */,
 				C567CD93290D701200E9B03D /* Resources */,
+				A7CFBF6B774C505497FB0535 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,7 +240,7 @@
 				};
 			};
 			buildConfigurationList = C567CD90290D701200E9B03D /* Build configuration list for PBXProject "BetterRest" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -257,6 +284,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A7CFBF6B774C505497FB0535 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BetterRest/Pods-BetterRest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BetterRest/Pods-BetterRest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BetterRest/Pods-BetterRest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C581FC1E290F56B2006D5E4A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"$SRCROOT\"\n";
+		};
+		F1A7C2A2A62DADD761900381 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BetterRest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C567CD91290D701200E9B03D /* Sources */ = {
@@ -353,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -407,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -419,6 +505,7 @@
 		};
 		C567CDBA290D701400E9B03D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CF2E5C549899304ACFEA49B /* Pods-BetterRest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -449,6 +536,7 @@
 		};
 		C567CDBB290D701400E9B03D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B88AC286CB2AC8101928CB41 /* Pods-BetterRest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

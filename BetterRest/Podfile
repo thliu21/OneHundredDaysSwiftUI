@@ -1,0 +1,9 @@
+# Podfile
+use_frameworks!
+
+platform :ios, '14.0'
+
+target 'BetterRest' do
+    pod 'SwiftFormat', '~> 0.50'
+    pod 'SwiftFormat/CLI', '~>0.50'
+end
