@@ -9,11 +9,14 @@ import SwiftUI
 import CoreML
 
 struct ContentView: View {
-    @State private var wakeUp = Date()
+    @State private var wakeUp: Date = {
+        var components = DateComponents()
+        components.hour = 8
+        components.minute = 0
+        return Calendar.current.date(from: components) ?? Date()
+    }()
     @State private var sleepAmount = 8.0
     @State private var coffeeCups = 1
-    
-    @State private var actualSleepAmount: Date? = nil
     
     var body: some View {
         NavigationView {
@@ -37,20 +40,18 @@ struct ContentView: View {
                     
                     VStack(alignment: .leading) {
                         Text("Actual Sleep Time").font(.headline)
-                        Text("\(actualSleepAmount?.formatedHoursAndMinutes() ?? " ")")
+                        Text("\(Self.calculateBedtime(wakeUp: wakeUp, sleepAmount: sleepAmount, coffeeCups: coffeeCups)?.formatedHoursAndMinutes() ?? " ")")
+                            .font(.system(size: 30, weight: .bold))
                     }
-                }
-                
-                Section {
-                    Button("Calculate", action: calculateBedtime)
-                        .frame(maxWidth: .infinity, alignment: .center)
                 }
             }
             .navigationTitle("BetterRest")
         }
     }
-    
-    func calculateBedtime() {
+}
+
+extension ContentView {
+    static func calculateBedtime(wakeUp: Date, sleepAmount: Double, coffeeCups: Int) -> Date? {
         do {
             let config = MLModelConfiguration()
             let model = try SleepCalc(configuration: config)
@@ -64,9 +65,9 @@ struct ContentView: View {
                 coffee: Double(coffeeCups)
             )
             
-            actualSleepAmount = wakeUp - prediction.actualSleep
+            return wakeUp - prediction.actualSleep
         } catch {
-            actualSleepAmount = nil
+            return nil
         }
     }
 }
