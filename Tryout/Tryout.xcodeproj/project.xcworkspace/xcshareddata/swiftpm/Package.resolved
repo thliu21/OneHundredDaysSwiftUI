@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-focuser",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:art-technologies/swift-focuser.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d9c5d87b65acfba16e39b05e64ca9b30b94546a8"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/SwiftUI-Introspect",
+      "state" : {
+        "revision" : "f2616860a41f9d9932da412a8978fec79c06fe24",
+        "version" : "0.1.4"
+      }
+    }
+  ],
+  "version" : 2
+}
