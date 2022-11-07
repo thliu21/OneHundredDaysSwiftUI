@@ -14,8 +14,7 @@
 		C5A5E49E290C030A003EDD60 /* TryoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E49D290C030A003EDD60 /* TryoutTests.swift */; };
 		C5A5E4A8290C030A003EDD60 /* TryoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E4A7290C030A003EDD60 /* TryoutUITests.swift */; };
 		C5A5E4AA290C030A003EDD60 /* TryoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5E4A9290C030A003EDD60 /* TryoutUITestsLaunchTests.swift */; };
-		C5C104FC2910CE980077C131 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = C5C104FB2910CE980077C131 /* Introspect */; };
-		C5C104FF2910D2BA0077C131 /* Focuser in Frameworks */ = {isa = PBXBuildFile; productRef = C5C104FE2910D2BA0077C131 /* Focuser */; };
+		C5AE30192917BA5800B98DE5 /* SwipeCell in Frameworks */ = {isa = PBXBuildFile; productRef = C5AE30182917BA5800B98DE5 /* SwipeCell */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C104FF2910D2BA0077C131 /* Focuser in Frameworks */,
-				C5C104FC2910CE980077C131 /* Introspect in Frameworks */,
+				C5AE30192917BA5800B98DE5 /* SwipeCell in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,8 +146,7 @@
 			);
 			name = Tryout;
 			packageProductDependencies = (
-				C5C104FB2910CE980077C131 /* Introspect */,
-				C5C104FE2910D2BA0077C131 /* Focuser */,
+				C5AE30182917BA5800B98DE5 /* SwipeCell */,
 			);
 			productName = Tryout;
 			productReference = C5A5E489290C0308003EDD60 /* Tryout.app */;
@@ -224,8 +221,7 @@
 			);
 			mainGroup = C5A5E480290C0308003EDD60;
 			packageReferences = (
-				C5C104FA2910CE980077C131 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				C5C104FD2910D2BA0077C131 /* XCRemoteSwiftPackageReference "swift-focuser" */,
+				C5AE30172917BA5800B98DE5 /* XCRemoteSwiftPackageReference "SwipeCell" */,
 			);
 			productRefGroup = C5A5E48A290C0308003EDD60 /* Products */;
 			projectDirPath = "";
@@ -437,7 +433,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +463,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -599,34 +595,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C5C104FA2910CE980077C131 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+		C5AE30172917BA5800B98DE5 /* XCRemoteSwiftPackageReference "SwipeCell" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			repositoryURL = "https://github.com/EnesKaraosman/SwipeCell";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.4;
-			};
-		};
-		C5C104FD2910D2BA0077C131 /* XCRemoteSwiftPackageReference "swift-focuser" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:art-technologies/swift-focuser.git";
-			requirement = {
-				branch = main;
-				kind = branch;
+				minimumVersion = 0.1.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C5C104FB2910CE980077C131 /* Introspect */ = {
+		C5AE30182917BA5800B98DE5 /* SwipeCell */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C5C104FA2910CE980077C131 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-		C5C104FE2910D2BA0077C131 /* Focuser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C5C104FD2910D2BA0077C131 /* XCRemoteSwiftPackageReference "swift-focuser" */;
-			productName = Focuser;
+			package = C5AE30172917BA5800B98DE5 /* XCRemoteSwiftPackageReference "SwipeCell" */;
+			productName = SwipeCell;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

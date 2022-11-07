@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Focuser
+import SwipeCell
 
 #if canImport(UIKit)
 extension View {
@@ -16,17 +16,22 @@ extension View {
 #endif
 
 struct ContentView: View {
-    @State private var tipAmount: String = "10"
+    @State private var numbers = [5, 6, 7, 8]
     
     var body: some View {
-        VStack {
-            TextField("Tip Amount ", text: $tipAmount)
-                .textFieldStyle(.roundedBorder)
-                .keyboardType(.decimalPad)
-            Button("Submit") {
-                print("Tip: \(tipAmount)")
-                hideKeyboard()
+        List {
+            ForEach(Array(numbers.enumerated()), id: \.offset) { idx, num in
+                Text("\(num)")
+                    .swipeActions(edge: .trailing) {
+                        Button(role: .destructive, action: { remove(at: idx) } ) {
+                            Text("Delete")
+                        }
+                    }
             }
         }
+    }
+    
+    private func remove(at index: Int) {
+        numbers.remove(at: index)
     }
 }
