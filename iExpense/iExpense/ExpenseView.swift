@@ -1,32 +1,22 @@
-//
-//  ContentView.swift
-//  iExpense
-//
-//  Created by Tianhao Liu on 11/5/22.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct ExpenseView: View {
     @StateObject private var expenses = Expenses()
     @State private var showingSheet = false
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type.rawValue)
+                ForEach(ExpenseType.allCases) { c in
+                    if let items = expenses.items.filter({ $0.type == c }),
+                       items.count > 0 {
+                        Section(header: Text(c.rawValue)) {
+                            ForEach(items) {    
+                                ExpenseItemView(item: $0)
+                            }
                         }
-                        
-                        Spacer()
-                        Text(AdaptedCurrencyFormatter().string(for: item.amount) ?? "")
                     }
                 }
-                .onDelete(perform: removeItems)
             }
             .navigationTitle("iExpense")
             .toolbar {

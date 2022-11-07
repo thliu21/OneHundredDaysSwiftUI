@@ -36,8 +36,8 @@ struct AddView: View {
 
                 Section {
                     Button("Submit") {
-                        expenses.items.append(.init(name: name, type: type, amount: amount))
-                        hideKeyboard()
+                        expenses.addItem(ExpenseItem(name: name, type: type, amount: amount))
+                        isPresented = false
                     }
                 }
             }

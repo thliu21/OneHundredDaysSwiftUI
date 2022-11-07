@@ -20,4 +20,8 @@ class Expenses: ObservableObject {
         }
         items = decoded
     }
+    
+    func addItem(_ item: ExpenseItem) {
+        items.append(item)
+    }
 }
