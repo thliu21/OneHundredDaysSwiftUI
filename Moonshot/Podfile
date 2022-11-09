@@ -1,0 +1,17 @@
+platform :ios, '14.0'
+
+target 'Moonshot' do
+  use_frameworks!
+
+  pod 'SwiftGen', '~> 6.6'
+
+  target 'MoonshotTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MoonshotUITests' do
+    # Pods for testing
+  end
+
+end
