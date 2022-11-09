@@ -8,19 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let layout = [
-        GridItem(.adaptive(minimum: 50)),
-        GridItem(.adaptive(minimum: 200))
-    ]
-    
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: layout) {
-                ForEach(1..<1001) {
-                    Text("Num: \($0)")
-                }
-            }
-        }
+        Image(asset: Asset.apollo10)
     }
 }
 

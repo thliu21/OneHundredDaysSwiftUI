@@ -12,11 +12,15 @@
 		B186338FDBD3593669617A22 /* Pods_Moonshot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC069280AB2EA502EC6A73BF /* Pods_Moonshot.framework */; };
 		C50517C4291BD12700E861A2 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50517C3291BD12700E861A2 /* MoonshotApp.swift */; };
 		C50517C6291BD12700E861A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50517C5291BD12700E861A2 /* ContentView.swift */; };
-		C50517C8291BD12900E861A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50517C7291BD12900E861A2 /* Assets.xcassets */; };
 		C50517CB291BD12900E861A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C50517CA291BD12900E861A2 /* Preview Assets.xcassets */; };
 		C50517D5291BD12900E861A2 /* MoonshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50517D4291BD12900E861A2 /* MoonshotTests.swift */; };
 		C50517DF291BD12900E861A2 /* MoonshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50517DE291BD12900E861A2 /* MoonshotUITests.swift */; };
 		C50517E1291BD12900E861A2 /* MoonshotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50517E0291BD12900E861A2 /* MoonshotUITestsLaunchTests.swift */; };
+		C50517F6291BE5E800E861A2 /* ImageAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50517F4291BE59700E861A2 /* ImageAssets+Generated.swift */; };
+		C50517F8291BE79F00E861A2 /* JsonFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50517F7291BE79F00E861A2 /* JsonFiles.swift */; };
+		C5051804291BE8C900E861A2 /* ImageAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5051801291BE8C900E861A2 /* ImageAssets.xcassets */; };
+		C5051805291BE90300E861A2 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = C50517FF291BE8C900E861A2 /* missions.json */; };
+		C5051806291BE90300E861A2 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = C5051800291BE8C900E861A2 /* astronauts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +50,17 @@
 		C50517C0291BD12700E861A2 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50517C3291BD12700E861A2 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		C50517C5291BD12700E861A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C50517C7291BD12900E861A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C50517CA291BD12900E861A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C50517D0291BD12900E861A2 /* MoonshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50517D4291BD12900E861A2 /* MoonshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotTests.swift; sourceTree = "<group>"; };
 		C50517DA291BD12900E861A2 /* MoonshotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoonshotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50517DE291BD12900E861A2 /* MoonshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotUITests.swift; sourceTree = "<group>"; };
 		C50517E0291BD12900E861A2 /* MoonshotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C50517F4291BE59700E861A2 /* ImageAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageAssets+Generated.swift"; sourceTree = "<group>"; };
+		C50517F7291BE79F00E861A2 /* JsonFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFiles.swift; sourceTree = "<group>"; };
+		C50517FF291BE8C900E861A2 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
+		C5051800291BE8C900E861A2 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
+		C5051801291BE8C900E861A2 /* ImageAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ImageAssets.xcassets; sourceTree = "<group>"; };
 		C51891C5E4444F7D43FBB8F4 /* Pods-Moonshot-MoonshotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moonshot-MoonshotUITests.release.xcconfig"; path = "Target Support Files/Pods-Moonshot-MoonshotUITests/Pods-Moonshot-MoonshotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB1CEF75B7C4B52B3A0981ED /* Pods_Moonshot_MoonshotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moonshot_MoonshotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC069280AB2EA502EC6A73BF /* Pods_Moonshot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moonshot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +114,6 @@
 				51B32D41E7186235EAA9DA2C /* Pods-MoonshotTests.debug.xcconfig */,
 				2DFB43C2A562EFD705F068C6 /* Pods-MoonshotTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -135,9 +142,10 @@
 		C50517C2291BD12700E861A2 /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
+				C50517FD291BE8C900E861A2 /* Resources */,
+				C50517F3291BE55500E861A2 /* SwiftGenOutput */,
 				C50517C3291BD12700E861A2 /* MoonshotApp.swift */,
 				C50517C5291BD12700E861A2 /* ContentView.swift */,
-				C50517C7291BD12900E861A2 /* Assets.xcassets */,
 				C50517C9291BD12900E861A2 /* Preview Content */,
 			);
 			path = Moonshot;
@@ -168,6 +176,33 @@
 			path = MoonshotUITests;
 			sourceTree = "<group>";
 		};
+		C50517F3291BE55500E861A2 /* SwiftGenOutput */ = {
+			isa = PBXGroup;
+			children = (
+				C50517F4291BE59700E861A2 /* ImageAssets+Generated.swift */,
+				C50517F7291BE79F00E861A2 /* JsonFiles.swift */,
+			);
+			path = SwiftGenOutput;
+			sourceTree = "<group>";
+		};
+		C50517FD291BE8C900E861A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C50517FE291BE8C900E861A2 /* Json */,
+				C5051801291BE8C900E861A2 /* ImageAssets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C50517FE291BE8C900E861A2 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				C50517FF291BE8C900E861A2 /* missions.json */,
+				C5051800291BE8C900E861A2 /* astronauts.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,6 +211,7 @@
 			buildConfigurationList = C50517E4291BD12900E861A2 /* Build configuration list for PBXNativeTarget "Moonshot" */;
 			buildPhases = (
 				6EE99E551C3C4EF65C61F1B9 /* [CP] Check Pods Manifest.lock */,
+				C50517F2291BE07700E861A2 /* SwiftGen */,
 				C50517BC291BD12700E861A2 /* Sources */,
 				C50517BD291BD12700E861A2 /* Frameworks */,
 				C50517BE291BD12700E861A2 /* Resources */,
@@ -275,8 +311,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5051805291BE90300E861A2 /* missions.json in Resources */,
+				C5051806291BE90300E861A2 /* astronauts.json in Resources */,
+				C5051804291BE8C900E861A2 /* ImageAssets.xcassets in Resources */,
 				C50517CB291BD12900E861A2 /* Preview Assets.xcassets in Resources */,
-				C50517C8291BD12900E861A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +401,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C50517F2291BE07700E861A2 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Resources/ImageAssets.xcassets",
+				"$(SRCROOT)/Recources/Json/",
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/SwiftGenOutput/ImageAssets+Generated.swift",
+				"$(DERIVED_FILE_DIR)/SwiftGenOutput/JsonFiles.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e";
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi \n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -370,6 +430,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50517F6291BE5E800E861A2 /* ImageAssets+Generated.swift in Sources */,
+				C50517F8291BE79F00E861A2 /* JsonFiles.swift in Sources */,
 				C50517C6291BD12700E861A2 /* ContentView.swift in Sources */,
 				C50517C4291BD12700E861A2 /* MoonshotApp.swift in Sources */,
 			);
