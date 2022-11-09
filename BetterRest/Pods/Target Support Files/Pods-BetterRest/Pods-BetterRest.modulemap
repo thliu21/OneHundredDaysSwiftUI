@@ -1,6 +1,0 @@
-framework module Pods_BetterRest {
-  umbrella header "Pods-BetterRest-umbrella.h"
-
-  export *
-  module * { export * }
-}
