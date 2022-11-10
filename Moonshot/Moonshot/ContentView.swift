@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    let astronauts = Bundle.main.decodeAstronauts()
+    
     var body: some View {
-        Image(asset: Asset.apollo10)
+        Text("\(astronauts.count)")
     }
 }
 
