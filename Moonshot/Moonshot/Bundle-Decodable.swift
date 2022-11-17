@@ -8,13 +8,19 @@
 import Foundation
 
 extension Bundle {
-    func decodeAstronauts() -> [String: Astronaut] {
-        let fileURL = JsonFiles.astronautsJson.url
+    func decodeJsonFile<T: Codable>(_ file: File) -> T {
+        let fileURL = file.url
         guard let data = try? Data(contentsOf: fileURL) else {
-            fatalError("Failed to load astronauts.json from bundle.")
+            fatalError("Failed to load \(file.name) from bundle.")
         }
-        guard let loaded = try? JSONDecoder().decode([String: Astronaut].self, from: data) else {
-            fatalError("Failed to decode astronauts.json")
+        
+        let decoder = JSONDecoder()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "y-MM-dd"
+        decoder.dateDecodingStrategy = .formatted(formatter)
+        
+        guard let loaded = try? decoder.decode(T.self, from: data) else {
+            fatalError("Failed to decode \(file.name)")
         }
         return loaded
     }
