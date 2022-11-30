@@ -30,7 +30,7 @@ struct NewHabitView: View {
             Section {
                 Button {
                     let habit = Habit()
-                    habit.name = name
+                    habit.title = name
                     habit.habitType = habitType
                     $habitCollection.habits.append(habit)
                     action = nil

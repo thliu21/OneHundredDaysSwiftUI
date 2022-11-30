@@ -23,7 +23,7 @@ class Habit: Object, ObjectKeyIdentifiable {
     }
     
     @Persisted(primaryKey: true) var _id: ObjectId
-    @Persisted var name: String = ""
+    @Persisted var title: String = ""
     @Persisted var creationTime: Date = Date()
     @Persisted var records = List<Record>()
     @Persisted var habitType: HabitType

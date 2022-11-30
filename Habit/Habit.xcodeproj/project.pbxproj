@@ -19,6 +19,8 @@
 		C563F58E293447D50063F906 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F58D293447D50063F906 /* Model.swift */; };
 		C563F59029344F450063F906 /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F58F29344F450063F906 /* HabitsView.swift */; };
 		C563F592293455820063F906 /* NewHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F591293455820063F906 /* NewHabitView.swift */; };
+		C563F596293738D10063F906 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F595293738D10063F906 /* HabitDetailView.swift */; };
+		C563F59829374A7B0063F906 /* HabitRenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C563F59729374A7B0063F906 /* HabitRenameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		C563F58D293447D50063F906 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C563F58F29344F450063F906 /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
 		C563F591293455820063F906 /* NewHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitView.swift; sourceTree = "<group>"; };
+		C563F595293738D10063F906 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		C563F59729374A7B0063F906 /* HabitRenameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRenameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				C563F558293083020063F906 /* ContentView.swift */,
 				C563F58F29344F450063F906 /* HabitsView.swift */,
 				C563F591293455820063F906 /* NewHabitView.swift */,
+				C563F595293738D10063F906 /* HabitDetailView.swift */,
+				C563F59729374A7B0063F906 /* HabitRenameView.swift */,
 				C563F58D293447D50063F906 /* Model.swift */,
 				C563F55A293083050063F906 /* Assets.xcassets */,
 				C563F55C293083050063F906 /* Preview Content */,
@@ -277,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C563F59829374A7B0063F906 /* HabitRenameView.swift in Sources */,
 				C563F58E293447D50063F906 /* Model.swift in Sources */,
 				C563F59029344F450063F906 /* HabitsView.swift in Sources */,
+				C563F596293738D10063F906 /* HabitDetailView.swift in Sources */,
 				C563F559293083020063F906 /* ContentView.swift in Sources */,
 				C563F592293455820063F906 /* NewHabitView.swift in Sources */,
 				C563F557293083020063F906 /* HabitApp.swift in Sources */,

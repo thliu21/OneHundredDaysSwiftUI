@@ -11,32 +11,35 @@ import RealmSwift
 struct HabitsView: View {
     @ObservedRealmObject var habitCollection: HabitCollection
     
-    @State private var action: Int? = 0
+    @State private var action: Int?
     
     var body: some View {
         NavigationView {
             List {
                 Section {
                     ForEach(habitCollection.habits, id: \._id) { habit in
-                        Text(habit.name)
+                        NavigationLink {
+                            HabitDetailView(habit: habit)
+                        } label: {
+                            Text(habit.title)
+                        }
                     }
+                    .onDelete(perform: $habitCollection.habits.remove)
                 }
                 Section {
-                    VStack {
-                        NavigationLink(
-                            destination: NewHabitView(
-                                habitCollection: habitCollection,
-                                action: $action
-                            ),
-                            tag: 1,
-                            selection: $action) {
-                                Button {
-                                    action = 1
-                                } label: {
-                                    Text("Add new")
-                                }
+                    NavigationLink(
+                        destination: NewHabitView(
+                            habitCollection: habitCollection,
+                            action: $action
+                        ),
+                        tag: 1,
+                        selection: $action) {
+                            Button {
+                                action = 1
+                            } label: {
+                                Text("Add new")
                             }
-                    }
+                        }
                 }
             }
             .navigationTitle("Habits")
