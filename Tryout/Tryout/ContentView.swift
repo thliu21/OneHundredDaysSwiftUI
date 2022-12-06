@@ -8,43 +8,18 @@
 import SwiftUI
 
 class TestObject: ObservableObject {
-    var value: Int = 0 {
-        didSet {
-            objectWillChange.send()
-        }
-    }
+    @Published var input: String = ""
+    
 }
 
 struct ContentView: View {
     @StateObject var data = TestObject()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("value is \(data.value)")
-                
-                NavigationLink {
-                    DetailView(data: data)
-                } label: {
-                    Text("Update")
-                }
-            }
-        }
-    }
-}
-
-struct DetailView: View {
-    @ObservedObject var data: TestObject
-    
-    var body: some View {
         VStack {
-            Text("current \(data.value)")
+            TextField("Input", text: $data.input, prompt: nil)
             
-            Button {
-                data.value += 1
-            } label: {
-                Text("Plus!")
-            }
+            Text(data.input)
         }
     }
 }
