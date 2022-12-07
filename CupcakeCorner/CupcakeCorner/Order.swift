@@ -12,6 +12,23 @@ class Order: ObservableObject {
     @Published var foodOrder = FoodOrder()
     @Published var address = Address()
     
+    var cost: Double {
+        // $2 per cake
+        var cost = Double(foodOrder.quantity) * 2
+
+        // $1/cake for extra frosting
+        if foodOrder.extraFrosting {
+            cost += Double(foodOrder.quantity)
+        }
+
+        // $0.50/cake for sprinkles
+        if foodOrder.addSprinkles {
+            cost += Double(foodOrder.quantity) / 2
+        }
+
+        return cost
+    }
+    
     private var cancellables = Set<AnyCancellable>()
     
     init() {

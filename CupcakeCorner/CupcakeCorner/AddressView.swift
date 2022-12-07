@@ -21,7 +21,7 @@ struct AddressView: View {
 
             Section {
                 NavigationLink {
-                    EmptyView()
+                    CheckoutView(order: order)
                 } label: {
                     Text("Check out")
                         .foregroundColor(order.address.isValid ? .red : .gray)
