@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class Order: ObservableObject {
+final class Order: ObservableObject {
     @Published var foodOrder = FoodOrder()
     @Published var address = Address()
     
@@ -42,7 +42,7 @@ class Order: ObservableObject {
 }
 
 class FoodOrder: ObservableObject {
-    enum CakeFlavor: String, CaseIterable {
+    enum CakeFlavor: String, CaseIterable, Codable {
         case vanilla = "Vanilla"
         case strawberry = "Strawberry"
         case chocolate = "Chocolate"
@@ -141,5 +141,42 @@ extension String {
     var isNumber: Bool {
         let digitsCharacters = CharacterSet(charactersIn: "0123456789")
         return CharacterSet(charactersIn: self).isSubset(of: digitsCharacters)
+    }
+}
+
+extension Order: Codable {
+    enum CodingKeys: CodingKey {
+        case flavor, quantity, extraFrosting, addSprinkles, name, streetAddress, city, zip
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encode(foodOrder.flavor.rawValue, forKey: .flavor)
+        try container.encode(foodOrder.quantity, forKey: .quantity)
+
+        try container.encode(foodOrder.extraFrosting, forKey: .extraFrosting)
+        try container.encode(foodOrder.addSprinkles, forKey: .addSprinkles)
+
+        try container.encode(address.name, forKey: .name)
+        try container.encode(address.streetAddress, forKey: .streetAddress)
+        try container.encode(address.city, forKey: .city)
+        try container.encode(address.zip, forKey: .zip)
+    }
+    
+    convenience init(from decoder: Decoder) throws {
+        self.init()
+        
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        foodOrder.flavor = try container.decode(FoodOrder.CakeFlavor.self, forKey: .flavor)
+        foodOrder.quantity = try container.decode(Int.self, forKey: .quantity)
+        foodOrder.extraFrosting = try container.decode(Bool.self, forKey: .extraFrosting)
+        foodOrder.addSprinkles = try container.decode(Bool.self, forKey: .addSprinkles)
+
+        address.name = try container.decode(String.self, forKey: .name)
+        address.streetAddress = try container.decode(String.self, forKey: .streetAddress)
+        address.city = try container.decode(String.self, forKey: .city)
+        address.zip = try container.decode(String.self, forKey: .zip)
     }
 }
