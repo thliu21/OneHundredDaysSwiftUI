@@ -434,8 +434,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/ImageAssets+Generated.swift",
-				"$(DERIVED_FILE_DIR)/JsonFiles.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/sh -e";
