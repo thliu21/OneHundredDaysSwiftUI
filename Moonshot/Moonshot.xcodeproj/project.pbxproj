@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		188004362972304B00D7C91B /* JsonFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188004342972304B00D7C91B /* JsonFiles.swift */; };
-		188004372972304B00D7C91B /* ImageAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188004352972304B00D7C91B /* ImageAssets+Generated.swift */; };
+		186DDCA5297236D6006C79AD /* ImageAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188004352972304B00D7C91B /* ImageAssets+Generated.swift */; };
+		186DDCA6297236D6006C79AD /* JsonFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188004342972304B00D7C91B /* JsonFiles.swift */; };
 		230FB142FDF94E27D83FAD1B /* Pods_MoonshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40D3CB1B324EB767EFFB096 /* Pods_MoonshotTests.framework */; };
 		78B77E910B6F71E11275B394 /* Pods_Moonshot_MoonshotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1CEF75B7C4B52B3A0981ED /* Pods_Moonshot_MoonshotUITests.framework */; };
 		B186338FDBD3593669617A22 /* Pods_Moonshot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC069280AB2EA502EC6A73BF /* Pods_Moonshot.framework */; };
@@ -164,6 +164,7 @@
 		C50517C2291BD12700E861A2 /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
+				188004332972303300D7C91B /* SwiftGenOutput */,
 				C50517FD291BE8C900E861A2 /* Resources */,
 				C50517C3291BD12700E861A2 /* MoonshotApp.swift */,
 				C50517C5291BD12700E861A2 /* ContentView.swift */,
@@ -206,7 +207,6 @@
 		C50517FD291BE8C900E861A2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				188004332972303300D7C91B /* SwiftGenOutput */,
 				C50517FE291BE8C900E861A2 /* Json */,
 				C5051801291BE8C900E861A2 /* ImageAssets.xcassets */,
 			);
@@ -449,7 +449,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188004372972304B00D7C91B /* ImageAssets+Generated.swift in Sources */,
+				186DDCA5297236D6006C79AD /* ImageAssets+Generated.swift in Sources */,
+				186DDCA6297236D6006C79AD /* JsonFiles.swift in Sources */,
 				C5051808291C919000E861A2 /* Astronaut.swift in Sources */,
 				C50517C6291BD12700E861A2 /* ContentView.swift in Sources */,
 				C521B5F8292712E500C1ADC8 /* AstronautView.swift in Sources */,
@@ -458,7 +459,6 @@
 				C505180E291CA5A000E861A2 /* ColorTheme.swift in Sources */,
 				C505180C291C96E600E861A2 /* Mission.swift in Sources */,
 				C505180A291C91BE00E861A2 /* Bundle-Decodable.swift in Sources */,
-				188004362972304B00D7C91B /* JsonFiles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
